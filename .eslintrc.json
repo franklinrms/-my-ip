@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@franklinrms/eslint-config/next", 
+    "next/core-web-vitals"
+  ]
+}
