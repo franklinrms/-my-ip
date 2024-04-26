@@ -1,8 +1,13 @@
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+import clsx from 'clsx'
 
-const inter = Inter({ subsets: ['latin'] })
+const hubot = localFont({
+  src: '../../public/assets/HubotSans.woff2',
+  variable: '--font-hubot',
+  weight: '400 900',
+})
 
 export const metadata: Metadata = {
   title: 'My IP',
@@ -15,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="[color-scheme:dark]" lang="en">
+      <body className={clsx('font-sans antialiased', hubot.variable)}>
+        {children}
+      </body>
     </html>
   )
 }
