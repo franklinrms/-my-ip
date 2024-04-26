@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import clsx from 'clsx'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const hubot = localFont({
   src: '../../public/assets/HubotSans.woff2',
@@ -22,7 +23,14 @@ export default function RootLayout({
   return (
     <html className="[color-scheme:dark]" lang="en">
       <body className={clsx('font-sans antialiased', hubot.variable)}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
