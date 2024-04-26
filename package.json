@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit",
+    "shadcn:add": "pnpm dlx shadcn-ui@latest add"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
