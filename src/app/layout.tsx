@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import clsx from 'clsx'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Header } from '@/components/header'
 
 const hubot = localFont({
   src: '../../public/assets/HubotSans.woff2',
@@ -29,6 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>
