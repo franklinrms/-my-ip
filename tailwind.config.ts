@@ -11,6 +11,10 @@ const config = {
   ],
   prefix: '',
   theme: {
+    // REMINDER: added for background.tsx
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    },
     container: {
       center: true,
       padding: '2rem',
