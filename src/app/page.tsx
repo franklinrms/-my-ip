@@ -1,10 +1,13 @@
-import { ButtonCopyToClipboard } from '@/components/button-copy-to-clipboard'
+import { Suspense } from 'react'
 import { Icons } from '@/components/icons'
 import { Nav } from '@/components/nav'
+import { IP } from '@/components/ip'
 import { siteConfig } from '@/config/site'
+import { Skeleton } from '@/components/ui/skeleton'
+
+export const revalidate = 3600 // 1 hour
 
 export default function Home() {
-  const ip = '38.253.116.83'
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-between p-4 sm:p-16">
       <div className="top-0 mx-auto flex w-full max-w-3xl sm:sticky">
@@ -14,18 +17,15 @@ export default function Home() {
         <div className="mx-auto mt-12 max-w-2xl gap-4 text-center">
           <h1 className="text-3xl">{siteConfig.name}</h1>
           <section className="flex min-h-60 flex-col items-center justify-center p-4">
-            <div className="flex flex-col items-center justify-center gap-2 p-2">
+            <div className="flex flex-col items-center justify-center gap-3 p-2">
               <label>Your public IP address:</label>
-              <pre className="flex items-center gap-2 rounded-lg border border-border bg-background/95 p-2 pl-4 text-3xl backdrop-blur-[2px] supports-[backdrop-filter]:bg-background/60">
-                <code>{ip}</code>
-                <ButtonCopyToClipboard text={ip} />
-              </pre>
+              <Suspense fallback={<Skeleton className="h-14 w-60" />}>
+                <IP />
+              </Suspense>
             </div>
           </section>
         </div>
-        <span className="flex h-40 w-full items-center justify-center bg-muted-foreground text-background">
-          banner
-        </span>
+        <Skeleton className="h-40 w-full" />
         <article className="flex min-h-full flex-1 flex-col">
           <div className="flex flex-col gap-3 border-t border-border pt-4">
             <h3 className="flex items-center gap-1 text-base">
