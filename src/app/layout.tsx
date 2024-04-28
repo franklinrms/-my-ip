@@ -3,7 +3,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import clsx from 'clsx'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Header } from '@/components/header'
+import Background from '@/components/background'
+import { siteConfig } from '@/config/site'
 
 const hubot = localFont({
   src: '../../public/assets/HubotSans.woff2',
@@ -12,8 +13,8 @@ const hubot = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'My IP',
-  description: 'A simple IP address lookup tool',
+  title: siteConfig.name,
+  description: siteConfig.description,
 }
 
 export default function RootLayout({
@@ -22,16 +23,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className="[color-scheme:dark]" lang="en">
+    <html className="[color-scheme:dark]" lang="en" suppressHydrationWarning>
       <body className={clsx('font-sans antialiased', hubot.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Background>{children}</Background>
         </ThemeProvider>
       </body>
     </html>
