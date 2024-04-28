@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'My IP',
+  name: `What's my IP?`,
   url: 'https://franklinrms.github.io/my-ip/',
   ogImage: '',
   description: 'A simple IP address lookup tool.',
