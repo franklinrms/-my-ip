@@ -15,7 +15,7 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
     </svg>
   ),
   moon: (props: IconProps) => (
@@ -32,7 +32,7 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
     </svg>
   ),
   sun: (props: IconProps) => (
@@ -49,7 +49,7 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
     </svg>
   ),
   translate: (props: IconProps) => (
@@ -61,7 +61,7 @@ export const Icons = {
       viewBox="0 0 256 256"
       {...props}
     >
-      <path d="M247.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,108,126.93,103.65,103.65,0,0,0,135.69,64H160a8,8,0,0,0,0-16H104V32a8,8,0,0,0-16,0V48H32a8,8,0,0,0,0,16h87.63A87.76,87.76,0,0,1,96,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,84,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L148.94,192h70.11l13.79,27.58A8,8,0,0,0,240,224a8,8,0,0,0,7.15-11.58ZM156.94,176,184,121.89,211.05,176Z"></path>
+      <path d="M247.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,108,126.93,103.65,103.65,0,0,0,135.69,64H160a8,8,0,0,0,0-16H104V32a8,8,0,0,0-16,0V48H32a8,8,0,0,0,0,16h87.63A87.76,87.76,0,0,1,96,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,84,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L148.94,192h70.11l13.79,27.58A8,8,0,0,0,240,224a8,8,0,0,0,7.15-11.58ZM156.94,176,184,121.89,211.05,176Z" />
     </svg>
   ),
   copy: (props: IconProps) => (
@@ -78,7 +78,7 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
     </svg>
   ),
   check: (props: IconProps) => (
@@ -95,7 +95,7 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
     </svg>
   ),
   info: (props: IconProps) => (
@@ -112,7 +112,24 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         clipRule="evenodd"
-      ></path>
+      />
+    </svg>
+  ),
+  chatBubble: (props: IconProps) => (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M12.5 3L2.5 3.00002C1.67157 3.00002 1 3.6716 1 4.50002V9.50003C1 10.3285 1.67157 11 2.5 11H7.50003C7.63264 11 7.75982 11.0527 7.85358 11.1465L10 13.2929V11.5C10 11.2239 10.2239 11 10.5 11H12.5C13.3284 11 14 10.3285 14 9.50003V4.5C14 3.67157 13.3284 3 12.5 3ZM2.49999 2.00002L12.5 2C13.8807 2 15 3.11929 15 4.5V9.50003C15 10.8807 13.8807 12 12.5 12H11V14.5C11 14.7022 10.8782 14.8845 10.6913 14.9619C10.5045 15.0393 10.2894 14.9965 10.1464 14.8536L7.29292 12H2.5C1.11929 12 0 10.8807 0 9.50003V4.50002C0 3.11931 1.11928 2.00003 2.49999 2.00002Z"
+        fill="currentColor"
+        fillRule="evenodd"
+        clipRule="evenodd"
+      />
     </svg>
   ),
   spinner: (props: IconProps) => (
