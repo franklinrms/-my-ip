@@ -4,11 +4,15 @@ import { buttonVariants } from './ui/button'
 import { Icons } from './icons'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
+import { Feedback } from './feedback'
 
 export function Nav() {
   return (
     <nav className="flex flex-1 items-center justify-center gap-2 p-1 sm:absolute sm:-right-12 sm:top-2 sm:flex-col">
       <ThemeToggle />
+
+      <Feedback />
+
       <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
         <div
           className={cn(
